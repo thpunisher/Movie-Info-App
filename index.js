@@ -42,6 +42,12 @@ let getMovie = () => {
                     <h3>Cast:</h3>
                     <p>${data.Actors}</p>
                 `;
+                document.getElementById('watch').innerHTML = `
+                    <div class="watch">
+                        <h2>${data.Title}</h2>
+                        <iframe src="https://www.2embed.to/embed/imdb/movie?id=${data.imdbID}"></iframe>
+                    </div>
+                `
                 movieNameRef.value = ""
             }
 
