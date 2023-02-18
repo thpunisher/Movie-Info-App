@@ -1,6 +1,7 @@
 let movieNameRef = document.getElementById("movie-name");
 let searchBtn = document.getElementById("search-btn");
 let result = document.getElementById("result");
+let frame = document.getElementsByTagName("iframe");
 
 //function to fetch data from api
 
@@ -45,7 +46,7 @@ let getMovie = () => {
                 document.getElementById('watch').innerHTML = `
                     <div class="watch">
                         <h2>${data.Title}</h2>
-                        <iframe src="https://www.2embed.to/embed/imdb/movie?id=${data.imdbID}"></iframe>
+                        <iframe allowfullscreen src="https://www.2embed.to/embed/imdb/movie?id=${data.imdbID}"></iframe>
                     </div>
                 `
                 movieNameRef.value = ""
